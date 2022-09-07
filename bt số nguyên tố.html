@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Hiện thị số nguyên tố đầu tiên
+<br><br>
+<button onclick="print()">In</button>
+<p id="result">kết qủa:</p>
+<script>
+  function print() {
+    document.getElementById('result').innerHTML='kết quả';
+    let count=0
+    let N=2
+    let number=+document.getElementById('n').value;
+    while (count<number){
+      check=false
+      for (let i=2;i<N;i++){
+        console.log("count========",count)
+        if (N%i==0){
+          console.log('N------',N)
+          check=true;
+          break
+        }
+      } if(!check){
+        document.getElementById('result').innerHTML+=(N+',')
+        count++
+      }
+    }
+    console.log()
+
+  }
+
+
+
+
+
+</script>
+</body>
+</html>
